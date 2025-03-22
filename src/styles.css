@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-options {
+  width: 100%;
+  height: 120px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: -83px;
+  transition: 0.5s ease;
+  z-index: 1;
+}
+
+.menu-options p {
+  font-size: 23px;
+  margin: 10px 55px;
+  cursor: pointer;
+}
+
+nav {
+  padding: 15px;
+  background-color: black;
+  display: flex;
+  border-bottom: 3px solid red;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+}
+
+.menu-tab {
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-tab > span {
+  width: 100%;
+  height: 5px;
+  background-color: grey;
+  position: absolute;
+  border-radius: 25%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+
+.menu-tab > span:nth-child(1) {
+  top: 25%;
+}
+
+.menu-tab > span:nth-child(3) {
+  top: 75%;
+}
+
+.menu-tab.click span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(47deg);
+}
+
+.menu-tab.click span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-tab.click span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, 50%) rotate(-47deg);
+}
+
+.menu-options.click {
+  top: 83px;
+}

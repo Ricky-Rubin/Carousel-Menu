@@ -13,9 +13,17 @@ function showDrop() {
         menuTab.classList.toggle('click');
         menuOptions.classList.toggle('click');
 
-        allTabs.forEach((tab) => {
-            tab.classList.remove('show');
-        })
+        if (contact.classList.contains('show')) {
+            contact.classList.remove('show');
+            detailTab.textContent = 'Contact +';
+        };
+
+        if (homeOpt.classList.contains('show')) {
+            homeOpt.classList.remove('show');
+            homeElement.textContent = 'Home +';
+        }
+
+        currentMenu = null;
     });
 
     function closeCurrentMenu() {

@@ -97,17 +97,19 @@ nav {
   background-color: rgb(235, 235, 238);
   position: fixed;
   top: 200px;
-  left: 34%;
+  left: 32%;
   opacity: 0;
   transition: 0.3s ease;
   visibility: hidden;
   transform: translateY(-10px);
   transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s;
+  font-family: Poppins;
 }
 
 .first {
   margin: 15px 0px;
-  font-size: 19px;
+  font-size: 17px;
+  transition: 0.4s ease;
 }
 
 .homeOpt {
@@ -124,7 +126,9 @@ nav {
 
 .homeOpt div {
   margin: 20px;
-  font-size: 19px;
+  font-size: 17px;
+  font-family: Poppins;
+  transition: 0.4s ease;
 }
 
 .admissions {
@@ -132,12 +136,26 @@ nav {
   background-color: rgb(235, 235, 238);
   position: fixed;
   top: 200px;
-  left: 45%;
+  left: 44%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s;
 }
 
 .admissions div {
-  font-size: 19px;
-  margin: 10px;
+  font-size: 17px;
+  margin: 15px 0px;
+  font-family: Poppins;
+  transition: 0.4s ease;
+}
+
+.admissions div:hover,
+.homeOpt div:hover,
+.first:hover {
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .show {

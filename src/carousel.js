@@ -4,7 +4,8 @@ const homeOpt = document.querySelector('.homeOpt');
 const contact = document.querySelector('.contact');
 const detailTab = document.querySelector('.details');
 const homeElement = document.querySelector('.home')
-const allTabs = document.querySelectorAll('.opt');
+const admTab = document.querySelector('.adm');
+const admOptions = document.querySelector('.admissions');
 
 function showDrop() {
     let currentMenu = null;
@@ -13,14 +14,19 @@ function showDrop() {
         menuTab.classList.toggle('click');
         menuOptions.classList.toggle('click');
 
-        if (contact.classList.contains('show')) {
+        if (currentMenu === contact) {
             contact.classList.remove('show');
             detailTab.textContent = 'Contact +';
         };
 
-        if (homeOpt.classList.contains('show')) {
+        if (currentMenu === homeOpt) {
             homeOpt.classList.remove('show');
             homeElement.textContent = 'Home +';
+        };
+
+        if (currentMenu === admOptions) {
+            admOptions.classList.remove('show');
+            admTab.textContent = 'Admissions +';
         }
 
         currentMenu = null;
@@ -38,6 +44,10 @@ function showDrop() {
         if (currentMenu === homeOpt) {
             homeElement.textContent = homeOpt.classList.contains('show') ? 'Home -' : 'Home +';
         };
+
+        if (currentMenu === admOptions) {
+            admTab.textContent = admOptions.classList.contains('show') ? 'Admissions -' : 'Admissions +';
+        }
     }
 
     detailTab.addEventListener('click', () => {
@@ -73,6 +83,19 @@ function showDrop() {
     // homeElement.addEventListener('mouseout', () => {
     //     homeTab.classList.remove('show');
     // });                                              This rule code block is for the mouseover-mouseout event options. 
+
+    admTab.addEventListener('click', () => {
+        closeCurrentMenu();
+
+        if (currentMenu === admOptions) {
+            admOptions.classList.remove('show');
+        } else {
+            admOptions.classList.add('show');
+        }
+
+        admTab.textContent = admOptions.classList.contains('show') ? 'Admissions -' : 'Admissions +';
+        currentMenu = admOptions.classList.contains('show') ? admOptions : null;
+    })
 };
 
 export { showDrop }

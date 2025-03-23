@@ -103,13 +103,13 @@ nav {
   visibility: hidden;
   transform: translateY(-10px);
   transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s;
-  font-family: Poppins;
 }
 
 .first {
   margin: 15px 0px;
   font-size: 17px;
   transition: 0.4s ease;
+  font-family: Poppins;
 }
 
 .homeOpt {
@@ -156,6 +156,7 @@ nav {
   text-decoration: underline;
   font-weight: 600;
   cursor: pointer;
+  font-size: 18px;
 }
 
 .show {

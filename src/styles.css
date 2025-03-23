@@ -107,7 +107,7 @@ nav {
 
 .first {
   margin: 15px 0px;
-  font-size: 17px;
+  font-size: 19px;
 }
 
 .homeOpt {
@@ -124,7 +124,20 @@ nav {
 
 .homeOpt div {
   margin: 20px;
-  font-size: 17px;
+  font-size: 19px;
+}
+
+.admissions {
+  padding: 20px 30px;
+  background-color: rgb(235, 235, 238);
+  position: fixed;
+  top: 200px;
+  left: 45%;
+}
+
+.admissions div {
+  font-size: 19px;
+  margin: 10px;
 }
 
 .show {

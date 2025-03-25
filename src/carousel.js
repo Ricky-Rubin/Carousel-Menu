@@ -98,4 +98,41 @@ function showDrop() {
     })
 };
 
-export { showDrop }
+function showCarousel() {
+    let slideNumber = 1;
+    showSlide(slideNumber);
+
+    function currentSlide(n) {
+        showSlide(slideNumber = n);
+    };
+
+    function prevOrNext(n) {
+        showSlide(slideNumber += n);
+    };
+
+    function showSlide(n) {
+        let i;
+        let slides = document.getElementsByClassName('frames');
+        let dots = document.getElementsByClassName('.dot');
+        if (n > slides.length) {
+            slideNumber = 1;
+        }
+
+        if (n < 1) {
+            slideNumber = slides.length;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace('active', '');
+        }
+
+        slides[slideNumber - 1].style.display = 'block';
+    }
+}
+
+export { showDrop };
+export { showCarousel };

@@ -177,6 +177,7 @@ nav {
 
 img {
   width: 100%;
+  margin-top: 95px;
 }
 
 .frame {
@@ -187,9 +188,9 @@ img {
 .next {
   width: auto;
   position: absolute;
-  font-size: 45px;
+  font-size: 20px;
   font-weight: 600;
-  top: 50%;
+  top: -11%;
   margin-top: 48%;
   cursor: pointer;
   padding: 18px;

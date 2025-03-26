@@ -146,6 +146,22 @@ function showCarousel() {
         prevOrNext(1);
     });
 
+    document.querySelector('.one').addEventListener('click', () => {
+        currentSlide(1);  
+    });
+
+    document.querySelector('.two').addEventListener('click', () => {
+        currentSlide(2);
+    });
+
+    document.querySelector('.three').addEventListener('click', () => {
+        currentSlide(3);
+    });
+
+    document.querySelector('.four').addEventListener('click', () => {
+        currentSlide(4);
+    })
+
     // let slidePlace = 0;
     // autoShow();
 

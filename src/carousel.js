@@ -162,12 +162,15 @@ function showCarousel() {
         currentSlide(4);
     })
 
+
+
     // let slidePlace = 0;
     // autoShow();
 
     // function autoShow() {
     //     let i;
     //     let slide = document.getElementsByClassName('frame');
+    //     let dots = document.getElementsByClassName('dot');
 
     //     for (let i = 0; i < slide.length; i++) {
     //         slide[i].style.display = 'none';
@@ -175,11 +178,15 @@ function showCarousel() {
 
     //     slidePlace++;
     //     if (slidePlace > slide.length) {
-    //         slidePlace = 0
+    //         slidePlace = 1
     //     };
-    //     slide[slidePlace - 1].style,display = 'block';
+    //     for (i = 0; i < dots.length; i++) {
+    //         dots[i].className = dots[i].className.replace(" active", "");
+    //       }
+    //     slide[slidePlace-1].style.display = 'block';
+    //     dots[slidePlace-1].className += " active";
     //     setTimeout(autoShow, 3500);
-    // }
+    // }                                                THIS BLOCK OF CODE IS TO LET THE CAROUSEL RUN AUTOMATICALLY.
 }
 
 export { showDrop };
